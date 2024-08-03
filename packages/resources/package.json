@@ -1,0 +1,9 @@
+{
+  "name": "resources",
+  "version": "0.0.1",
+  "description": "{$APP_DESC}",
+  "author": "{$APP_AUTHOR} <{$APP_AUTHOR}@email.com>",
+  "homepage": "NONE",
+  "license": "{$APP_LICENSE}",
+  "main": "resources.js"
+}
