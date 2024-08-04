@@ -9,7 +9,7 @@
     "rollup": "npm run clean && node ./rollup.js",
     "build:packages": "lerna run rebuild && lerna run build:renderer",
     "build:host": "npm run build:packages && npm run rollup && node ./builder",
-    "build:cross": "lerna version patch -y && npm run clean && node ./cross --platform linux/arm64"
+    "build:cross": "lerna version patch --no-git-tag-version --no-push -y && npm run clean && node ./cross --platform linux/arm64"
   },
   "devDependencies": {
     "@electron/rebuild": "^3.6.0",
