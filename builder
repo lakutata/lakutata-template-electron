@@ -5,7 +5,7 @@ const path = require('path')
 const builderConfig = {
     linux: {
         desktop: {
-            Name: require('app/package.json').appName
+            Name: require('./packages/app/package.json').appName
         },
         executableArgs: [
             '--enable-features=UseOzonePlatform',
