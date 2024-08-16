@@ -67,7 +67,7 @@ setImmediate(async () => {
         targets: targets,
         config: {
             appId: packageJson.appId,
-            productName: packageJson.appName,
+            productName: packageJson.appId,
             buildVersion: packageJson.version,
             copyright: `Copyright © ${new Time().format('YYYY')} ${typeof packageJson.author === 'string' ? packageJson.author : packageJson.author.name}`,
             icon: appLogoFilename,

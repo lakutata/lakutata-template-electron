@@ -28,7 +28,7 @@ setImmediate(async () => {
                             const rootPackageJson = require('./package.json')
                             const packageJson = JSON.parse(contents.toString())
                             packageJson.main = './app/App.js'
-                            packageJson.name = packageJson.appName
+                            packageJson.name = packageJson.appId
                             packageJson.dependencies = {...packageJson.dependencies, ...rootPackageJson.dependencies}
                             packageJson.devDependencies = {...packageJson.devDependencies, ...rootPackageJson.devDependencies}
                             return Buffer.from(JSON.stringify(packageJson, null, 2))
