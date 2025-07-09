@@ -5,9 +5,11 @@ class Example {
     public timestamp: number = Date.now()
 
     public startUpdateTimestampInterval() {
-        setInterval(() => {
-            this.timestamp = Date.now()
+        const setTimer = () => setTimeout(async () => {
+            this.timestamp = await window.ipc.invoke({ctrl: 'example', act: 'test', timestamp: Date.now()})
+            setTimer()
         }, 100)
+        setTimer()
     }
 }
 

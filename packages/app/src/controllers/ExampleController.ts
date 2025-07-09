@@ -8,8 +8,10 @@ export class ExampleController extends Controller {
     /**
      * Example test action
      */
-    @ServiceAction({ctrl: 'example', act: 'test'}, TestOptions)
+    // @ServiceAction({ctrl: 'example', act: 'test'}, TestOptions)
+    @ServiceAction({ctrl: 'example', act: 'test'})
     public async test(inp: ActionPattern<TestOptions>): Promise<number> {
+        console.log(inp)
         return inp.timestamp
     }
 }

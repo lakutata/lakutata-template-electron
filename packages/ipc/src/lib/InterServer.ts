@@ -57,7 +57,7 @@ export class InterServer {
                 }
                 handler(new ServiceContext({
                     data: inp,
-                    clientId: inp.id,
+                    clientId: inp.__$clientId,
                     requestId: NonceStr(),
                     reply: doReply
                 }))

@@ -17,7 +17,7 @@ export class InterClient {
      * @param inp
      */
     public async invoke<T = any>(inp: Record<string, any>): Promise<T> {
-        inp.id = this.id
+        inp.__$clientId = this.id
         const response: any = await ipcRenderer.invoke(IPC_REQ, inp)
         if (response.code) throw new Error(response.message)
         return response.data
