@@ -86,8 +86,8 @@ export class MainWindow extends Component {
         }
         if (this.app.mode() === 'development') {
             const {createServer} = require('ui/rendererServer')
-            const server = await createServer()
-            await this.#instance.loadURL(server.resolvedUrls.local[0])
+            const devServerURL: string = await createServer()
+            await this.#instance.loadURL(devServerURL)
         } else {
             await this.#instance.loadFile(path.join(path.dirname(require.resolve('ui/rendererServer')), './dist/renderer/index.html'))
         }

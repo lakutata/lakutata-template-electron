@@ -6,23 +6,20 @@
   "license": "{$APP_LICENSE}",
   "main": "dist/electron/main.js",
   "scripts": {
-    "dev:renderer": "vite -c vite/renderer.mts",
-    "build:renderer": "vite build -c vite/renderer.mts",
-    "serve": "http-server ./dist/renderer -c-1",
-    "test": "ts-node test/test.ts",
-    "test:electron": "electron ./test/electron.js"
+    "rebuild": "vite build"
   },
   "devDependencies": {
-    "@emotion/react": "^11.11.1",
-    "@types/react": "^18.2.79",
-    "@types/react-dom": "^18.2.25",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3",
-    "react-simple-keyboard": "^3.7.124",
-    "react-transition-group": "^4.4.5",
-    "ts-node": "^10.9.2",
-    "vite": "^5.2.8"
+    "@canlooks/can-ui": "^0.0.67",
+    "@canlooks/react-router": "^1.0.12",
+    "@canlooks/reactive": "^4.2.3",
+    "@canlooks/utils": "^2.1.6",
+    "@emotion/react": "^11.14.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.0"
   },
   "dependencies": {
     "ipc": "^0.0.1"

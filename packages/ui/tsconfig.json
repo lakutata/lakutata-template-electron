@@ -2,42 +2,32 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "Node10",
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react",
-    "strict": true,
-    "sourceMap": true,
     "skipLibCheck": true,
-    "importHelpers": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noImplicitOverride": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
       ]
     },
-    "types": [
-      "vite/client"
-    ],
     "lib": [
       "DOM",
       "DOM.Iterable",
       "ESNext",
-      "ScriptHost",
       "WebWorker"
     ]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "declaration/**/*"
-  ],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
-    }
-  }
+    "src/**/*",
+    "vite.config.*"
+  ]
 }
